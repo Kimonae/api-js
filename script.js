@@ -1,0 +1,33 @@
+var btn = document.getElementById("btn");
+var aa = document.getElementById("aa");
+
+btn.addEventListener("click", function() {
+
+console.log("I said, don't touch me.");
+
+
+alert("Hey ! I don't consent. Don't touch me like that");
+
+
+/*fetch('https://jsonplaceholder.typicode.com/todos/1')
+  .then(response => response.json())
+  .then(js => console.log(js))réponse asyncrhone, prend du temps*/
+
+  display(); 
+
+
+  async function display() {
+    const responseJson = await fetch('https://jsonplaceholder.typicode.com/todos/1'); //async .. await => indication sur la prise de temps
+    //comme .then
+
+    //response.Json.json converti en js
+    const reponseJS = await responseJson.json();
+    console.log(responseJS);
+
+    
+    aa.innerHTML = responseJS.title;
+ 
+    
+
+  };
+});
