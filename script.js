@@ -50,10 +50,26 @@ displayList();
 
   
 
-   responseJS.forEach(i => console.log(Array(i)));
+   //responseJS.forEach(i => console.log(Array(i)));
 
 
-   };
+   responseJS.forEach((i) => {
+ 
+    //aa.innerHTML += i.title;
+            aa.innerHTML += `<div>
+            <p>${i.title}</p>
+            <p>${i.body}<p/>
+            </div>
+            `;
+
+
+
+    });
+
+
+   }
+
+
 
 
    
