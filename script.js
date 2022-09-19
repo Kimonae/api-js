@@ -48,6 +48,12 @@ displayList();
     const responseJS = await responseJson.json();
 
 
-   console.log(responseJS);
+  
 
-    }
+   responseJS.forEach(i => console.log(Array(i)));
+
+
+   };
+
+
+   
