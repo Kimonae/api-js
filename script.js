@@ -1,12 +1,13 @@
 var btn = document.getElementById("btn");
 var aa = document.getElementById("aa");
+var btnlist = document.getElementById("btnlist");
 
 btn.addEventListener("click", function() {
 
 console.log("I said, don't touch me.");
 
 
-alert("Hey ! I don't consent. Don't touch me like that");
+//alert("Hey ! I don't consent. Don't touch me like that");
 
 
 /*fetch('https://jsonplaceholder.typicode.com/todos/1')
@@ -31,3 +32,22 @@ alert("Hey ! I don't consent. Don't touch me like that");
 
   };
 });
+
+btnlist.addEventListener("click", function() {
+
+
+  
+displayList();
+  
+
+ });
+
+
+ async function displayList() {
+    const responseJson = await fetch('https://jsonplaceholder.typicode.com/posts');
+    const responseJS = await responseJson.json();
+
+
+   console.log(responseJS);
+
+    }
