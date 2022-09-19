@@ -21,7 +21,7 @@ alert("Hey ! I don't consent. Don't touch me like that");
     //comme .then
 
     //response.Json.json converti en js
-    const reponseJS = await responseJson.json();
+    const responseJS = await responseJson.json();
     console.log(responseJS);
 
     
